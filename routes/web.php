@@ -10,8 +10,7 @@ Route::get('/', function () {
 });
 Route::get('/home', function () {
     echo "<h1>Well come to home page</h1>";
-});
-// check if the user is 
+}); 
 Route::get('/about',[ContactController::class,'about'])->middleware('check');
 Route::get('/contact',[ContactController::class,'index']);
 Route::get('/register',[ContactController::class,'register']);
