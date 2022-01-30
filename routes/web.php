@@ -11,9 +11,10 @@ Route::get('/', function () {
 Route::get('/home', function () {
     echo "<h1>Well come to home page</h1>";
 }); 
-Route::get('/about',[ContactController::class,'about'])->middleware('check');
+
+Route::get('/about',[ContactController::class,'about']);
 Route::get('/contact',[ContactController::class,'index']);
 Route::get('/register',[ContactController::class,'register']);
-Route::get('/dashboard',[ContactController::class,'dashboard'])->middleware('pass');
+Route::get('/dashboard',[ContactController::class,'dashboard']);
 
 
