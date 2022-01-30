@@ -12,8 +12,9 @@ Route::get('/home', function () {
     echo "<h1>Well come to home page</h1>";
 });
 // check if the user is 
-Route::get('/about',function(){
-    return view('about');
-})->middleware('check');
-
+Route::get('/about',[ContactController::class,'about'])->middleware('check');
 Route::get('/contact',[ContactController::class,'index']);
+Route::get('/register',[ContactController::class,'register']);
+Route::get('/dashboard',[ContactController::class,'dashboard'])->middleware('pass');
+
+
